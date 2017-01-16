@@ -4,19 +4,19 @@ namespace app\admin\controller;
 
 
 /**
- * Class Login 登录模块
+ * Class Login 用户模块
  * @package app\admin\controller
  */
-class Login extends Base
+class Account extends Base
 {
 
     /**
      * 首页
      */
-    public function index(){
+    public function login(){
 
 
-        return $this->view->fetch('index',[
+        return $this->view->fetch('login',[
             'title'     =>      '登录'
         ]);
     }

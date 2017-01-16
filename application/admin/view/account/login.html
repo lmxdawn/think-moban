@@ -13,8 +13,8 @@
 
 
 <div class="login-layout">
-    <div class="logo"><img src="images/loginImg.png"></div>
-    <form action="privilege.php?act=signin" name='theForm' id="theForm" method="post">
+    <div class="logo"></div>
+    <form action="" name='theForm' id="theForm" onsubmit="return false;">
         <div class="login-form" style="position: relative">
             <div class="formContent">
                 <div class="title">管理中心</div>
@@ -29,24 +29,22 @@
                     </div>
                     <div class="formText">
                         <div class="checkbox">
-                            <div class="cur">
-                                <input type="hidden" value="0" name="remember"/>
-                            </div>
+                            <div class="cur"></div>
                         </div>
                         <span class="span">保存信息</span>
                         <a href="get_password.php?act=forget_pwd" class="forget_pwd">忘记密码？</a>
                     </div>
                     <div class="formText submitDiv">
-                                                    	<span class="text_span">
-                            	<div class="code">
-                                	<div class="arrow"></div>
-                                    <div class="code-img"><img style="cursor: pointer;" src="index.php?act=captcha" onclick= $(".code-img").find('img').attr('src',"index.php?act=captcha&"+Math.random()) /></div>
-                                </div>
-                        		<input type="text" name="captcha" class="input-yzm" value="" autocomplete="off" />
-                            </span>
+                        <span class="text_span">
+                            <div class="code">
+                                <div class="arrow"></div>
+                                <div class="code-img"><img style="cursor: pointer;" src="index.php?act=captcha" onclick= $(".code-img").find('img').attr('src',"index.php?act=captcha&"+Math.random()) /></div>
+                            </div>
+                            <input type="text" name="captcha" class="input-yzm" value="" autocomplete="off" />
+                        </span>
                         <span class="submit_span">
-                            	<input type="submit" name="submit" class="sub" value="登录" />
-                            </span>
+                            <input type="button" name="submit" class="sub" value="登录" />
+                        </span>
                     </div>
                 </div>
             </div>
@@ -55,15 +53,6 @@
             </div>
         </div>
     </form>
-</div>
-<div id="bannerBox">
-    <ul id="slideBanner" class="slideBanner">
-        <li><img src="images/banner_1.jpg"></li>
-        <li><img src="images/banner_2.jpg"></li>
-        <li><img src="images/banner_3.jpg"></li>
-        <li><img src="images/banner_4.jpg"></li>
-        <li><img src="images/banner_5.jpg"></li>
-    </ul>
 </div>
 
 
@@ -76,18 +65,19 @@
 <!--登录模块js-->
 <script src="{$Think.config.sys_config.lmx_static_url}/modules/admin/account/js/login.js?t={$Think.config.sys_config.lmx_version}"></script>
 
+{/block}
 
+
+
+<!--页面JS脚本-->
+{block name="script"}
+{__block__}
 
 <script type="text/javascript">
-    $("#bannerBox").slide({mainCell:".slideBanner",effect:"fold",interTime:3500,delayTime:500,autoPlay:true,autoPage:true,endFun:function(i,c,s){
-        $(window).resize(function(){
-            var width = $(window).width();
-            var height = $(window).height();
-            s.find(".slideBanner,.slideBanner li").css({"width":width,"height":height});
-        });
-    }});
 
     $(function(){
+
+        // 输入框的高亮
         $(".formText .input-text").focus(function(){
             $(this).parent().addClass("focus");
         });
@@ -96,16 +86,12 @@
             $(this).parent().removeClass("focus");
         });
 
+        // 保存信息的切换
         $(".checkbox").click(function(){
-            if($(this).hasClass("checked")){
-                $(this).removeClass("checked");
-                $('input[name=remember]').val(0);
-            }else{
-                $(this).addClass("checked");
-                $('input[name=remember]').val(1);
-            }
+            $(this).toggleClass('checked');
         });
 
+        // 验证码的显示与隐藏
         $(".formText .input-yzm").focus(function(){
             $(this).prev().show();
         });
@@ -115,88 +101,11 @@
         });
 
 
+        //提交登录请求
+        $('#error').html('<span class="error">用户名或密码错误!</span>');
+
     });
-
-    /*  @author-bylu 输入验证 start  */
-    $(function(){
-        $('.submit_span .sub').on('click',function(){
-            $('.code').show();
-        });
-        $('#theForm input[name=submit]').on('click',function(){
-            var username=true;
-            var password=true;
-            var captcha=true;
-
-            if($('#theForm input[name=username]').val() == ''){
-                $('#error').html('<span class="error">用户名不能为空!</span>');
-                $('#theForm input[name=username]').focus();
-                username = false;
-                return false;
-            }
-
-            if($('#theForm input[name=password]').val() == ''){
-                $('#error').html('<span class="error">密码不能为空!</span>');
-                $('#theForm input[name=password]').focus();
-                password = false;
-                return false;
-            }
-
-            if($('#theForm input[name=captcha]').val() == ''){
-                $('#error').html('<span class="error">验证码不能为空!</span>');
-                $('#theForm input[name=captcha]').focus();
-                captcha = false;
-                return false;
-            }
-
-            if(captcha){
-                $.ajax({
-                    async:false,
-                    url:'privilege.php?act=signin&type=captcha',
-                    data:{'captcha':$('#theForm input[name=captcha]').val()},
-                    type:'post',
-                    success:function(data){
-                        if(data == 'false'){
-                            $('#error').html('<span class="error">验证码错误!</span>');
-                            captcha = false;
-                            return false;
-                        }
-                    }
-                });
-            }
-            if(captcha && $('#theForm input[name=username]').val() != '' && $('#theForm input[name=password]').val() != ''){
-                $.ajax({
-                    async:false,
-                    url:'privilege.php?act=signin&type=password',
-                    data:{'username':$('#theForm input[name=username]').val(),'password':$('#theForm input[name=password]').val()},
-                    type:'post',
-                    success:function(data){
-                        if(data == 'false'){
-                            $('#error').html('<span class="error">用户名或密码错误!</span>');
-                            $('.code-img img').attr('src','index.php?act=captcha&'+Math.random());
-                            username=false;
-                            password=false;
-                            return false;
-                        }
-                    }
-                });
-            }
-
-            if(captcha && username && password){
-                $('#theForm').submit();
-            }else{
-                return false;
-            }
-        });
-
-        $(document).click(function(e){
-            if(e.target.name !='captcha' && !$(e.target).parents("div").is(".submitDiv")){
-                $('.code').hide();
-            }
-        });
-    });
-    /*  @author-bylu  end */
 </script>
 
 {/block}
-
 

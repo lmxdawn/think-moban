@@ -13,235 +13,90 @@
     {include file="basecss" /}
 
     <!--CSS引用-->
-    <link rel="stylesheet" href="{$Think.config.sys_config.lmx_static_url}/modules/admin/index/css/main.css?t={$Think.config.sys_config.lmx_version}" >
+    <link rel="stylesheet" href="{$Think.config.sys_config.lmx_static_url}/modules/admin/index/css/index.css?t={$Think.config.sys_config.lmx_version}" >
     <link rel="stylesheet" href="{$Think.config.sys_config.lmx_static_url}/extend/admin/sidebarMenu.css?t={$Think.config.sys_config.lmx_version}" >
 
 </head>
 
-<body>
+<body style="background-color: rgb(70, 142, 51);">
 
 
-
-    <div class="lmx">
-
-        <div id="loading"><i class="loadingicon"></i><span>正在加载...</span></div>
-
-
-        <!--头部 start-->
-        <div class="lmx-header" id="lmx-header">
-
+    <div class="admin-header clearfix">
+        <!-- 颜色选择层 bylu -->
+        <div class="bgSelector" style="display: block;"><div id="bgColorSelector"><div id="bscParent" style="height: 36px;"><div id="bscDrag" title="滑动一下，焕新色彩" style="width: 25px; height: 31px; top: 0px; left: 552.567px;" class="ui-draggable ui-draggable-handle"><img src="images/cur.png" alt="" style="width: 42px; left: -9px; height: 32px;"></div><table id="bscDrop" cellspacing="0" cellpadding="0"><tbody><tr><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(152, 23, 103); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(173, 17, 107); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(182, 25, 68); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(170, 24, 21); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(196, 24, 45); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(215, 70, 65); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(237, 110, 77); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(215, 138, 103); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(245, 166, 117); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(248, 200, 136); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(249, 211, 155); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(248, 219, 135); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(255, 216, 57); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(249, 209, 44); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(250, 187, 61); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(248, 203, 60); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(244, 228, 126); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(244, 237, 135); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(223, 224, 94); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(205, 202, 91); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(168, 192, 61); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(115, 168, 51); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(70, 142, 51); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(92, 177, 71); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(107, 185, 121); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(142, 200, 156); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(154, 208, 185); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(151, 211, 227); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(124, 204, 238); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(90, 195, 236); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(22, 184, 216); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(73, 180, 214); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(109, 180, 228); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(141, 194, 234); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(189, 184, 220); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(131, 129, 189); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(123, 111, 176); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(170, 134, 188); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(170, 122, 179); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(147, 94, 162); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(157, 85, 156); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(201, 92, 157); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(220, 117, 171); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(238, 125, 174); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(230, 165, 202); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(234, 148, 190); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(214, 63, 125); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(193, 55, 74); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(171, 50, 85); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(165, 18, 99); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(127, 40, 93); height: 31px;">&nbsp;</span></td></tr></tbody></table></div></div></div>
+        <div class="admin-logo">
+            <a href="javascript:void(0);" data-url="index.php?act=main" data-param="index|main" target="workspace">
+                <img src="images/admin-logo.png">
+            </a>
+            <div class="foldsider">
+                <i class="fa fa-indent"></i>
+            </div>
         </div>
-        <!--头部 end-->
-
-        <!--左侧 start-->
-        <div class="lmx-left" id="lmx-left">
-
-            <div class="lmx-left-manual">
-                <span class="lmx-left-manual-switch">
-                    <i class="fa fa-angle-left " id="close" title="关闭侧边栏"></i>
+        <div class="module-menu">
+            <ul>
+                <li data-param="menuplatform" class="active"><a href="javascript:void(0);">平台</a></li>
+                <li data-param="menushopping" class=""><a href="javascript:void(0);">商城</a></li>
+                <li data-param="ectouch" class=""><a href="javascript:void(0);">手机</a></li>
+                <li data-param="menuinformation" class=""><a href="javascript:void(0);">资源</a></li>
+            </ul>
+        </div>
+        <div class="admin-header-right">
+            <div class="manager">
+                <dl>
+                    <dt class="name">admin</dt>
+                    <dd class="group">超级管理员</dd>
+                </dl>
+                <span class="avatar">
+                    <form action="index.php" id="fileForm" method="post" enctype="multipart/form-data" runat="server">
+                        <input name="img" class="admin-avatar-file" id="_pic" title="设置管理员头像" type="file">
+                    </form>
+                    <img nctype="admin_avatar" src="images/admin.png">
                 </span>
-            </div>
-
-            <div class="lmx-left-nav">
-                <!--左侧导航 start-->
-                <div class="lmx-left-nav-content">
-                    <aside class="main-sidebar">
-                        <section  class="sidebar">
-                            <ul class="sidebar-menu">
-                                <li class="header">主导航</li>
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-dashboard"></i> <span>仪表盘</span> <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 仪表盘 v1</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 仪表盘 v2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-files-o"></i>
-                                        <span>布局选项</span>
-                                        <span class="label label-primary pull-right">4</span>
-                                    </a>
-                                    <ul class="treeview-menu" style="display: none;">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 顶部导航</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 盒子布局</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 固定布局</a></li>
-                                        <li class=""><a href="#"><i class="fa fa-circle-o"></i> 折叠侧边栏</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-th"></i> <span>窗口小部件</span>
-                                        <small class="label pull-right label-info">新的</small>
-                                    </a>
-                                </li>
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-pie-chart"></i>
-                                        <span>图表</span>
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> Morris</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> Flot</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-                                    </ul>
-                                </li>
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-laptop"></i>
-                                        <span>UI 元素</span>
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 一般</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> Icons图标</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 按钮</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 滑块</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 时间表</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 模态框</a></li>
-                                    </ul>
-                                </li>
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-edit"></i> <span>表单</span>
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 一般表单</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 高级表单</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 可编辑表单</a></li>
-                                    </ul>
-                                </li>
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-table"></i> <span>表格</span>
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 简单表格</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 时间表格</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-calendar"></i> <span>日历</span>
-                                        <small class="label pull-right label-danger">3</small>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-envelope"></i> <span>邮箱</span>
-                                        <small class="label pull-right label-warning">12</small>
-                                    </a>
-                                </li>
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-folder"></i> <span>实例</span>
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 清单</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 简况</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 登录</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 注册</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 锁频</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 404 错误</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 500 错误</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 空白页面</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 自适应页面</a></li>
-                                    </ul>
-                                </li>
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-share"></i> <span>多级</span>
-                                        <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 一级</a></li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-circle-o"></i> 一级 <i class="fa fa-angle-right pull-right"></i></a>
-                                            <ul class="treeview-menu">
-                                                <li><a href="#"><i class="fa fa-circle-o"></i> 二级</a></li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-circle-o"></i> 二级 <i class="fa fa-angle-right pull-right"></i></a>
-                                                    <ul class="treeview-menu">
-                                                        <li><a href="#"><i class="fa fa-circle-o"></i> 三级</a></li>
-                                                        <li><a href="#"><i class="fa fa-circle-o"></i> 三级</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> 一级</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#"><i class="fa fa-book"></i> <span>文档</span></a></li>
-                                <li class="header">标签</li>
-                                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>重要</span></a></li>
-                                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>警告</span></a></li>
-                                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>通知</span></a></li>
-                            </ul>
-                        </section>
-                    </aside>
+                <i class="arrow" id="admin-manager-btn"></i>
+                <div class="manager-menu" style="display: none;">
+                    <div class="title">
+                        <h4>最后登录</h4>
+                        <a href="privilege.php?act=edit&amp;id=39" target="workspace" class="edit_pwd">修改密码</a>
+                    </div>
+                    <div class="login-date">
+                        <strong>2017-01-16 23:18:55</strong>
+                        <span>(IP:1.14.138.225)</span>
+                    </div>
+                    <div class="title mt10">
+                        <h4>常用操作</h4>
+                        <a href="javascript:;" class="add_nav">添加菜单</a>
+                    </div>
+                    <div class="quick_link">
+                        <ul>
+                        </ul>
+                    </div>
                 </div>
-                <!--左侧导航 end-->
             </div>
-
+            <div class="operate">
+                <li style="position: relative;">
+                    <a href="javascript:void(0);" class="msg" title="查看消息">&nbsp;</a><s>2</s>
+                    <!-- 消息通知 bylu -->
+                    <div id="msg_Container" style="display: none;">
+                        <h3>消息通知</h3>
+                        <div class="msg_content"><p class="first"><a href="order.php?act=list" target="workspace" class="message">您有新订单!</a> <span class="tiptool">1</span></p><p class="last"><a href="order.php?act=list" target="workspace" class="message">您有新付款的订单!</a> <span class="tiptool">1</span></p></div>
+                    </div>
+                </li>
+                <i></i>
+                <li><a href="../" target="_blank" class="home" title="新窗口打开商城首页">&nbsp;</a></li>
+                <i></i>
+                <li><a href="javascript:void(0);" class="sitemap" title="查看全部管理菜单">&nbsp;</a></li>
+                <i></i>
+                <li><a href="javascript:void(0);" id="trace_show" class="style-color" title="给管理中心换个颜色">&nbsp;</a></li>
+                <i></i>
+                <li><a href="index.php?act=clear_cache" class="clear" target="workspace" title="清除缓存">&nbsp;</a></li>
+                <i></i>
+                <li><a href="privilege.php?act=logout" class="prompt" title="安全退出管理中心">&nbsp;</a></li>
+            </div>
         </div>
-        <!--左侧 end-->
-
-
-        <!--内容部分 start-->
-        <div class="lmx-content" id="lmx-content">
-
-            <!--内容主体 start-->
-
-            <div class="lmx-breadcrumbs">
-
-                <!--向左按钮-->
-                <a id="task-pre" class="lmx-task-changebt">←</a>
-
-                <!--导航 start-->
-                <div class="lmx-nav" id="lmx-nav" style="max-width: 834px;">
-
-                    <ul class="lmx-tab" id="lmx-tab" style="width: 800px;">
-
-                        <li class="lmx-tabitem current" app-id="0" app-url="{:url('main/index')}" app-name="首页">
-                            <i class="fa fa-desktop"></i>
-                            <span class="lmx-tabitem-text" title="后台首页">后台首页</span>
-                        </li>
-
-                    </ul>
-
-                </div>
-                <!--导航 end-->
-
-                <a id="task-next" class="lmx-task-changebt">→</a>
-
-                <div id="right_tools_wrapper">
-                    <span id="refresh_wrapper" title="刷新页面" ><i class="fa fa-refresh right_tool_icon"></i></span>
-                </div>
-
-
-            </div>
-
-            <!--主体-->
-            <div class="lmx-main" id="lmx-main">
-                <!--<iframe src="{:url('main/index')}" style="width: 100%; height: 100%;" frameborder="0" id="appiframe-0" class="appiframe"></iframe>-->
-            </div>
-
-
-            <!--内容主体 end-->
-
-
-        </div>
-        <!--内容部分 end-->
-
     </div>
+
+
+
 
 
 
@@ -249,7 +104,7 @@
     {include file="basejs" /}
 
     <!--JS引用-->
-    <script src="{$Think.config.sys_config.lmx_static_url}/modules/admin/index/js/main.js?t={$Think.config.sys_config.lmx_version}"></script>
+    <script src="{$Think.config.sys_config.lmx_static_url}/modules/admin/index/js/index.js?t={$Think.config.sys_config.lmx_version}"></script>
 
 
 

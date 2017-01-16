@@ -27,7 +27,7 @@ class Base extends Controller
 
         if ($debug == true){
             //调试环境
-            Config::set('sys_config.lmx_static_url','//localhost/think-team-manage/public/static');
+            Config::set('sys_config.lmx_static_url','//localhost/think-moban/public/static');
             Config::set('sys_config.lmx_static_debug',true);
 
 

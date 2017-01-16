@@ -73,6 +73,11 @@
 {block name="js"}
 {__block__}
 
+<!--登录模块js-->
+<script src="{$Think.config.sys_config.lmx_static_url}/modules/admin/account/js/login.js?t={$Think.config.sys_config.lmx_version}"></script>
+
+
+
 <script type="text/javascript">
     $("#bannerBox").slide({mainCell:".slideBanner",effect:"fold",interTime:3500,delayTime:500,autoPlay:true,autoPage:true,endFun:function(i,c,s){
         $(window).resize(function(){
@@ -191,8 +196,6 @@
     });
     /*  @author-bylu  end */
 </script>
-    <!--登录模块js-->
-    <script src="{$Think.config.sys_config.lmx_static_url}/modules/admin/login/js/login.js?t={$Think.config.sys_config.lmx_version}"></script>
 
 {/block}
 

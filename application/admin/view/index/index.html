@@ -10,7 +10,7 @@
     <meta name="format-detection" content="telephone=no">
 
     <!--公共css-->
-    {include file="basecss" /}
+    {include file="header" /}
 
     <!--CSS引用-->
     <link rel="stylesheet" href="{$Think.config.sys_config.lmx_static_url}/modules/admin/index/css/index.css?t={$Think.config.sys_config.lmx_version}" >
@@ -18,27 +18,18 @@
 
 </head>
 
-<body style="background-color: rgb(70, 142, 51);">
-
+<body style="background-color: rgb(70, 142, 51);overflow: hidden;">
 
     <div class="admin-header clearfix">
         <!-- 颜色选择层 bylu -->
-        <div class="bgSelector" style="display: block;"><div id="bgColorSelector"><div id="bscParent" style="height: 36px;"><div id="bscDrag" title="滑动一下，焕新色彩" style="width: 25px; height: 31px; top: 0px; left: 552.567px;" class="ui-draggable ui-draggable-handle"><img src="images/cur.png" alt="" style="width: 42px; left: -9px; height: 32px;"></div><table id="bscDrop" cellspacing="0" cellpadding="0"><tbody><tr><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(152, 23, 103); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(173, 17, 107); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(182, 25, 68); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(170, 24, 21); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(196, 24, 45); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(215, 70, 65); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(237, 110, 77); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(215, 138, 103); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(245, 166, 117); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(248, 200, 136); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(249, 211, 155); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(248, 219, 135); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(255, 216, 57); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(249, 209, 44); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(250, 187, 61); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(248, 203, 60); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(244, 228, 126); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(244, 237, 135); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(223, 224, 94); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(205, 202, 91); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(168, 192, 61); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(115, 168, 51); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(70, 142, 51); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(92, 177, 71); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(107, 185, 121); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(142, 200, 156); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(154, 208, 185); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(151, 211, 227); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(124, 204, 238); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(90, 195, 236); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(22, 184, 216); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(73, 180, 214); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(109, 180, 228); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(141, 194, 234); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(189, 184, 220); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(131, 129, 189); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(123, 111, 176); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(170, 134, 188); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(170, 122, 179); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(147, 94, 162); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(157, 85, 156); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(201, 92, 157); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(220, 117, 171); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(238, 125, 174); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(230, 165, 202); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(234, 148, 190); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(214, 63, 125); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(193, 55, 74); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(171, 50, 85); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(165, 18, 99); height: 31px;">&nbsp;</span></td><td style="height: 31px;" class="ui-droppable"><span style="background-color: rgb(127, 40, 93); height: 31px;">&nbsp;</span></td></tr></tbody></table></div></div></div>
+        <div class="bgSelector"></div>
         <div class="admin-logo">
-            <a href="javascript:void(0);" data-url="index.php?act=main" data-param="index|main" target="workspace">
-                <img src="images/admin-logo.png">
-            </a>
-            <div class="foldsider">
-                <i class="fa fa-indent"></i>
-            </div>
+            <a href="javascript:void(0);" data-url="index.php?act=main" data-param="index|main" target="workspace"><img src="images/admin-logo.png"></a>
+            <div class="foldsider"><i class="icon icon-indent-left"></i></div>
         </div>
         <div class="module-menu">
             <ul>
-                <li data-param="menuplatform" class="active"><a href="javascript:void(0);">平台</a></li>
-                <li data-param="menushopping" class=""><a href="javascript:void(0);">商城</a></li>
-                <li data-param="ectouch" class=""><a href="javascript:void(0);">手机</a></li>
-                <li data-param="menuinformation" class=""><a href="javascript:void(0);">资源</a></li>
-            </ul>
+                <li data-param="menuplatform" class="active"><a href="javascript:void(0);">平台</a></li>                                                			<li data-param="menushopping"><a href="javascript:void(0);">商城</a></li>                                                			<li data-param="ectouch"><a href="javascript:void(0);">手机</a></li>                                                			<li data-param="menuinformation"><a href="javascript:void(0);">资源</a></li>                            		</ul>
         </div>
         <div class="admin-header-right">
             <div class="manager">
@@ -53,14 +44,14 @@
                     <img nctype="admin_avatar" src="images/admin.png">
                 </span>
                 <i class="arrow" id="admin-manager-btn"></i>
-                <div class="manager-menu" style="display: none;">
+                <div class="manager-menu">
                     <div class="title">
                         <h4>最后登录</h4>
                         <a href="privilege.php?act=edit&amp;id=39" target="workspace" class="edit_pwd">修改密码</a>
                     </div>
                     <div class="login-date">
-                        <strong>2017-01-16 23:18:55</strong>
-                        <span>(IP:1.14.138.225)</span>
+                        <strong>2017-01-18 15:30:14</strong>
+                        <span>(IP:220.248.85.234)</span>
                     </div>
                     <div class="title mt10">
                         <h4>常用操作</h4>
@@ -74,12 +65,12 @@
             </div>
             <div class="operate">
                 <li style="position: relative;">
-                    <a href="javascript:void(0);" class="msg" title="查看消息">&nbsp;</a><s>2</s>
+                    <a href="javascript:void(0);" class="msg" title="查看消息">&nbsp;</a>
                     <!-- 消息通知 bylu -->
-                    <div id="msg_Container" style="display: none;">
+                    <!-- <div id="msg_Container">
                         <h3>消息通知</h3>
-                        <div class="msg_content"><p class="first"><a href="order.php?act=list" target="workspace" class="message">您有新订单!</a> <span class="tiptool">1</span></p><p class="last"><a href="order.php?act=list" target="workspace" class="message">您有新付款的订单!</a> <span class="tiptool">1</span></p></div>
-                    </div>
+                        <div class="msg_content"><div class="no_msg">暂无消息!</div></div>
+                    </div>-->
                 </li>
                 <i></i>
                 <li><a href="../" target="_blank" class="home" title="新窗口打开商城首页">&nbsp;</a></li>
@@ -95,17 +86,145 @@
         </div>
     </div>
 
-
-
-
+    <div class="admin-main">
+        <div class="top-border"></div>
+        <div class="admin-main-left">
+            <div class="admincj_nav">
+                <div class="navLeftTab" id="adminNavTabs_menuplatform" style="">
+                    <div class="item current">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_01_system"></i><h4>设置</h4></a></div>
+                        <div class="sub-menu" style="top: 0px; display: block;">
+                            <ul>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="shop_config.php?act=list_edit" data-param="menuplatform|01_shop_config" target="workspace">商店设置</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="reg_fields.php?act=list" data-param="menuplatform|021_reg_fields" target="workspace">会员注册项设置</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="payment.php?act=list" data-param="menuplatform|02_payment_list" target="workspace">支付方式</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="shipping.php?act=list" data-param="menuplatform|03_area_shipping" target="workspace">地区&amp;配送</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="shop_config.php?act=mail_settings" data-param="menuplatform|04_mail_settings" target="workspace">邮件服务器设置</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="cron.php?act=list" data-param="menuplatform|07_cron_schcron" target="workspace">计划任务</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="friend_link.php?act=list" data-param="menuplatform|08_friendlink_list" target="workspace">友情链接</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="friend_partner.php?act=list" data-param="menuplatform|09_partnerlink_list" target="workspace">合作伙伴</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="oss_configure.php?act=list" data-param="menuplatform|api" target="workspace">接口对接</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="captcha_manage.php?act=main" data-param="menuplatform|captcha_manage" target="workspace">验证码设置</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="check_file_priv.php?act=check" data-param="menuplatform|check_file_priv" target="workspace">文件权限检测</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="navigator.php?act=list" data-param="menuplatform|navigator" target="workspace">自定义导航栏</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="sitemap.php" data-param="menuplatform|sitemap" target="workspace">站点地图</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="keywords_manage.php?act=list" data-param="menuplatform|user_keywords_list" target="workspace">用户检索记录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_05_banner"></i><h4>广告管理</h4></a></div>
+                        <div class="sub-menu" style="top: -68px; display: none;">
+                            <ul>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="ads.php?act=list" data-param="menuplatform|ad_list" target="workspace">广告列表</a></li>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="ad_position.php?act=list" data-param="menuplatform|ad_position" target="workspace">广告位置</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_06_stats"></i><h4>统计</h4></a></div>
+                        <div class="sub-menu" style="top: -136px; display: none;">
+                            <ul>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="guest_stats.php?act=list" data-param="menuplatform|report_guest" target="workspace">客户统计</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="order_stats.php?act=list" data-param="menuplatform|report_order" target="workspace">订单统计</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="users_order.php?act=order_num" data-param="menuplatform|report_users" target="workspace">会员排行</a></li>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="sale_list.php?act=list" data-param="menuplatform|sale_list" target="workspace">销售明细</a></li>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="visit_sold.php?act=list" data-param="menuplatform|visit_buy_per" target="workspace">访问购买率</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_07_content"></i><h4>文章管理</h4></a></div>
+                        <div class="sub-menu" style="top: -204px; display: none;">
+                            <ul>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="articlecat.php?act=list" data-param="menuplatform|02_articlecat_list" target="workspace">文章分类</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="article.php?act=list" data-param="menuplatform|03_article_list" target="workspace">文章列表</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="article_auto.php?act=list" data-param="menuplatform|article_auto" target="workspace">文章自动发布</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="vote.php?act=list" data-param="menuplatform|vote_list" target="workspace">在线调查</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_08_members"></i><h4>会员</h4></a></div>
+                        <div class="sub-menu" style="top: -272px; display: none;">
+                            <ul>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="users.php?act=list" data-param="menuplatform|03_users_list" target="workspace">会员列表</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="user_rank.php?act=list" data-param="menuplatform|05_user_rank_list" target="workspace">会员等级</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="integrate.php?act=list" data-param="menuplatform|06_list_integrate" target="workspace">会员整合</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="user_msg.php?act=list_all" data-param="menuplatform|08_unreply_msg" target="workspace">会员留言</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="user_account.php?act=list" data-param="menuplatform|09_user_account" target="workspace">充值和提现申请</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="user_account_manage.php?act=list" data-param="menuplatform|10_user_account_manage" target="workspace">资金管理</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="user_address_log.php?act=list" data-param="menuplatform|12_user_address_list" target="workspace">收货地址列表</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="user_baitiao_log.php?act=list" data-param="menuplatform|13_user_baitiao_info" target="workspace">会员白条</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="user_real.php?act=list" data-param="menuplatform|16_users_real" target="workspace">实名认证</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_10_priv_admin"></i><h4>权限管理</h4></a></div>
+                        <div class="sub-menu" style="top: -340px; display: none;">
+                            <ul>
+                                <li class=""><s></s><a href="javascript:void(0);" data-url="privilege.php?act=list" data-param="menuplatform|01_admin_list" target="workspace">管理员列表</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="privilege_seller.php?act=list" data-param="menuplatform|02_admin_seller" target="workspace">下级管理员列表</a></li>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="admin_logs.php?act=list" data-param="menuplatform|admin_logs" target="workspace">管理员日志</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="role.php?act=list" data-param="menuplatform|admin_role" target="workspace">角色管理</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="agency.php?act=list" data-param="menuplatform|agency_list" target="workspace">办事处列表</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="suppliers.php?act=list" data-param="menuplatform|suppliers_list" target="workspace">供货商列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_12_template"></i><h4>模板管理</h4></a></div>
+                        <div class="sub-menu" style="top: -408px; display: none;">
+                            <ul>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="template.php?act=list" data-param="menuplatform|02_template_select" target="workspace">模板选择</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="template.php?act=setup" data-param="menuplatform|03_template_setup" target="workspace">设置模板</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="template.php?act=library" data-param="menuplatform|04_template_library" target="workspace">库项目管理</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="edit_languages.php?act=list" data-param="menuplatform|05_edit_languages" target="workspace">语言项编辑</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="template.php?act=backup_setting" data-param="menuplatform|06_template_backup" target="workspace">模板设置备份</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="mail_template.php?act=list" data-param="menuplatform|mail_template_manage" target="workspace">邮件模板</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_13_backup"></i><h4>数据库管理</h4></a></div>
+                        <div class="sub-menu" style="top: -476px; display: none;">
+                            <ul>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="database.php?act=backup" data-param="menuplatform|02_db_manage" target="workspace">数据备份</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="database.php?act=optimize" data-param="menuplatform|03_db_optimize" target="workspace">数据表优化</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="sql.php?act=main" data-param="menuplatform|04_sql_query" target="workspace">SQL查询</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="table_prefix.php?act=edit" data-param="menuplatform|05_table_prefix" target="workspace">修改表前缀</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="transfer_manage.php" data-param="menuplatform|06_transfer_config" target="workspace">源站点信息设置</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="transfer_manage.php?act=choose" data-param="menuplatform|07_transfer_choose" target="workspace">迁移数据</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="convert.php?act=main" data-param="menuplatform|convert" target="workspace">转换数据</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="tit"><a href="javascript:void(0)"><i class="nav_icon icon_16_email_manage"></i><h4>邮件群发管理</h4></a></div>
+                        <div class="sub-menu" style="top: -544px; display: none;">
+                            <ul>
+                                <li class="curr"><s></s><a href="javascript:void(0);" data-url="attention_list.php?act=list" data-param="menuplatform|attention_list" target="workspace">关注管理</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="email_list.php?act=list" data-param="menuplatform|email_list" target="workspace">邮件订阅管理</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="magazine_list.php?act=list" data-param="menuplatform|magazine_list" target="workspace">杂志管理</a></li>
+                                <li><s></s><a href="javascript:void(0);" data-url="view_sendlist.php?act=list" data-param="menuplatform|view_sendlist" target="workspace">邮件队列管理</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="admin-main-right">
+            <iframe src="{:url('admin/main/index')}" id="workspace" name="workspace" scrolling="yes" width="100%" height="95%" frameborder="0"></iframe>
+        </div>
+    </div>
 
 
     <!--公共js-->
-    {include file="basejs" /}
+    {include file="footer" /}
 
     <!--JS引用-->
     <script src="{$Think.config.sys_config.lmx_static_url}/modules/admin/index/js/index.js?t={$Think.config.sys_config.lmx_version}"></script>
-
 
 
 </body>

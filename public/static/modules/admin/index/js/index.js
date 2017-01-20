@@ -4,6 +4,27 @@
 
 $(function () {
 
+    var headerHeight = $(".admin-header").height() //头部高度
+        ,topHeight = $(".top-border").height() //tab 高度
+    /**
+     * 调整页面宽高
+     */
+    function fixHeight() {
+        console.log($(window).height())
+        console.log(headerHeight)
+        console.log(topHeight)
+        $(".admin-main-left .admincj_nav .item .sub-menu ul").height($(window).height() - headerHeight  - topHeight);
+        $(".admin-main-left .admincj_nav").height($(window).height() - headerHeight  - topHeight);
+    }
+
+    /**
+     * 当页面大小变化 调整页面元素宽高
+     */
+    $(window).resize(function(){
+        fixHeight();
+
+    }).resize();
+
     var foldHoverTimer, foldOutTimer,foldHoverTimer2;
     $(document).on("mouseenter",".fold .tit",function(){
         var $this = $(this);
